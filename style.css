@@ -11,22 +11,8 @@ body {
   background-image: url("https://images.pexels.com/photos/3888151/pexels-photo-3888151.jpeg?auto=compress&cs=tinysrgb&w=1200");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  position: relative;
-}
-
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: black;
-  opacity: 0.5;
-  z-index: -1;
 }
 
 header {
@@ -34,40 +20,39 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
 }
 
-header .logo {
-  height: 100px;
-  width: 170px;
+.logo {
+  height: 60px;
+  width: auto;
 }
 
-header nav ul {
-  list-style: none;
+nav {
+  flex-grow: 1;
+}
+
+nav ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
+  list-style: none;
+  flex-wrap: wrap; /* 狭い画面で折り返し */
 }
 
-header nav ul li {
-  margin: 0 15px;
+nav ul li {
+  margin: 0 10px;
 }
 
-header nav ul li a {
+nav ul li a {
   text-decoration: none;
   color: white;
+  font-size: 10px;
   font-weight: 600;
   transition: all 0.3s;
 }
 
-header nav ul li .contact {
-  display: block;
-  background: rgb(72, 149, 142);
-  border-radius: 15px;
-  padding: 10px 20px;
-}
-
-header nav ul li a:hover {
+nav ul li a:hover {
   color: #767685;
 }
 
@@ -79,11 +64,9 @@ main {
   align-items: center;
   text-align: center;
   color: white;
-  padding: 20px;
 }
 
 main h1 {
-  margin-bottom: 15px;
   font-size: 65px;
 }
 
@@ -93,39 +76,24 @@ main p {
 }
 
 .button-area {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   margin-top: 40px;
+  display: flex;
+  gap: 20px;
 }
 
 .button-area button {
-  padding: 17px 30px;
+  padding: 15px 30px;
   background: white;
   border: none;
   border-radius: 30px;
-  color: black;
+  font-size: 16px;
   font-weight: 600;
-  font-size: 20px;
   cursor: pointer;
   transition: all 0.3s;
-  margin: 20px;
 }
 
 .button-area button:hover {
   color: #767685;
-}
-
-#cursor {
-  pointer-events: none;
-  width: 30px;
-  height: 30px;
-  background: rgba(240, 136, 122, 0.5);
-  border-radius: 50%;
-  position: fixed;
-  top: -16px;
-  left: -16px;
-  transition: 0.15s;
 }
 
 @media (max-width: 768px) {
@@ -135,23 +103,19 @@ main p {
     text-align: center;
   }
 
-  header nav ul {
-    display: flex;
-    flex-direction: row !important; /* 横並びを強制 */
-    flex-wrap: wrap; /* 画面が狭くても折り返し可能に */
+  nav ul {
+    flex-direction: row !important;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 0;
   }
 
-  header nav ul li {
-    margin: 5px 8px; /* 隙間を調整 */
-    list-style: none;
+  nav ul li {
+    margin: 5px;
   }
 
-  header nav ul li a {
-    font-size: 10px; /* フォントサイズを10pxに */
-    padding: 5px 10px; /* クリックしやすく */
-    display: block;
+  nav ul li a {
+    font-size: 10px;
   }
 
   main h1 {
@@ -165,15 +129,5 @@ main p {
   .button-area {
     flex-direction: column;
     align-items: center;
-  }
-
-  .button-area button {
-    padding: 15px 25px;
-    font-size: 16px;
-    margin: 10px 0;
-  }
-
-  body {
-    background-position: top;
   }
 }
