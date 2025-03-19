@@ -17,37 +17,27 @@ body {
 
 header {
   display: flex;
+  justify-content: center; /* ナビゲーションを中央揃え */
   align-items: center;
-  justify-content: space-between;
   padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.7);
   width: 100%;
-}
-
-.logo {
-  height: 60px;
-  width: auto;
-}
-
-nav {
-  flex-grow: 1;
 }
 
 nav ul {
   display: flex;
-  justify-content: flex-end;
   list-style: none;
-  flex-wrap: wrap; /* 狭い画面で折り返し */
+  gap: 30px; /* 項目間の間隔を少し広げる */
+  padding: 0;
 }
 
 nav ul li {
-  margin: 0 10px;
+  display: inline-block;
 }
 
 nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 10px;
+  font-size: 10px; /* スマホ対応のため10px */
   font-weight: 600;
   transition: all 0.3s;
 }
@@ -67,11 +57,11 @@ main {
 }
 
 main h1 {
-  font-size: 65px;
+  font-size: 55px; /* サイズを少し小さくする */
 }
 
 main p {
-  font-size: 30px;
+  font-size: 25px; /* サイズを少し小さくする */
   font-weight: 600;
 }
 
@@ -99,15 +89,12 @@ main p {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 
   nav ul {
-    flex-direction: row !important;
-    flex-wrap: wrap;
+    flex-direction: row; /* スマホでも横並び */
+    flex-wrap: wrap; /* 画面幅が狭くなったら折り返す */
     justify-content: center;
-    padding: 0;
   }
 
   nav ul li {
