@@ -17,19 +17,16 @@ body {
 
 header {
   display: flex;
-  justify-content: center; /* ナビゲーションを中央揃え */
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  width: 100%;
+  padding: 20px 40px; /* 上部の余白を戻す */
   background: transparent; /* 黒の背景を削除 */
-  position: relative;
-  z-index: 10; /* 他の要素に被らないように */
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 20px; /* 項目間の間隔を少し広げる */
+  gap: 20px; /* 項目間の間隔 */
   padding: 0;
 }
 
@@ -58,7 +55,6 @@ main {
   text-align: center;
   color: white;
   padding: 20px; /* 上下の余白を追加 */
-  z-index: 1;
 }
 
 main h1 {
@@ -94,28 +90,24 @@ main p {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
+    padding: 10px 20px; /* スマホ用に余白を調整 */
   }
 
   nav ul {
-    flex-direction: row; /* スマホでも横並び */
-    flex-wrap: wrap; /* 画面幅が狭くなったら折り返す */
-    justify-content: center;
-  }
-
-  nav ul li {
-    margin: 5px;
+    flex-direction: column; /* 項目を縦並びに */
+    gap: 15px; /* 項目間の余白 */
   }
 
   nav ul li a {
-    font-size: 10px;
+    font-size: 12px; /* スマホ用に文字サイズを少し大きく */
   }
 
   main h1 {
-    font-size: 32px;
+    font-size: 32px; /* サイズを調整 */
   }
 
   main p {
-    font-size: 22px;
+    font-size: 22px; /* サイズを調整 */
   }
 
   .button-area {
