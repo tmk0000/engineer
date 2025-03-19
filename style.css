@@ -21,12 +21,13 @@ header {
   align-items: center;
   padding: 10px 20px;
   width: 100%;
+  /* 黒の背景を削除 */
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 30px; /* 項目間の間隔を少し広げる */
+  gap: 20px; /* 項目間の間隔を少し広げる */
   padding: 0;
 }
 
