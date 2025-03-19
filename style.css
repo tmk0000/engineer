@@ -20,14 +20,13 @@ header {
   justify-content: center; /* ナビゲーションを中央揃え */
   align-items: center;
   padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.7); /* 背景を少し黒く */
   width: 100%;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 30px; /* 項目間の間隔を少し広げる */
   padding: 0;
 }
 
@@ -58,11 +57,11 @@ main {
 }
 
 main h1 {
-  font-size: 65px;
+  font-size: 55px; /* サイズを少し小さくする */
 }
 
 main p {
-  font-size: 30px;
+  font-size: 25px; /* サイズを少し小さくする */
   font-weight: 600;
 }
 
