@@ -137,16 +137,17 @@ main p {
   }
 
   header nav ul {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;  /* ここを修正 */
+    flex-wrap: wrap;      /* 折り返し可能に */
+    justify-content: center;
   }
 
   header nav ul li {
-    margin: 10px 0;
+    margin: 5px 10px; /* マージンを調整 */
   }
 
   header nav ul li a {
-    font-size: 10px;
+    font-size: 10px;  /* フォントサイズを10pxに */
   }
 
   main h1 {
@@ -172,3 +173,4 @@ main p {
     background-position: top;
   }
 }
+
