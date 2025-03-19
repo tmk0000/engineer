@@ -21,7 +21,9 @@ header {
   align-items: center;
   padding: 10px 20px;
   width: 100%;
-  /* 黒の背景を削除 */
+  background: transparent; /* 黒の背景を削除 */
+  position: relative;
+  z-index: 10; /* 他の要素に被らないように */
 }
 
 nav ul {
@@ -55,6 +57,8 @@ main {
   align-items: center;
   text-align: center;
   color: white;
+  padding: 20px; /* 上下の余白を追加 */
+  z-index: 1;
 }
 
 main h1 {
