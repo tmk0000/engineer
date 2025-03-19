@@ -128,7 +128,6 @@ main p {
   transition: 0.15s;
 }
 
-/* スマホ対応 */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -137,17 +136,22 @@ main p {
   }
 
   header nav ul {
-    flex-direction: row;  /* ここを修正 */
-    flex-wrap: wrap;      /* 折り返し可能に */
+    display: flex;
+    flex-direction: row !important; /* 横並びを強制 */
+    flex-wrap: wrap; /* 画面が狭くても折り返し可能に */
     justify-content: center;
+    padding: 0;
   }
 
   header nav ul li {
-    margin: 5px 10px; /* マージンを調整 */
+    margin: 5px 8px; /* 隙間を調整 */
+    list-style: none;
   }
 
   header nav ul li a {
-    font-size: 10px;  /* フォントサイズを10pxに */
+    font-size: 10px; /* フォントサイズを10pxに */
+    padding: 5px 10px; /* クリックしやすく */
+    display: block;
   }
 
   main h1 {
@@ -173,4 +177,3 @@ main p {
     background-position: top;
   }
 }
-
