@@ -16,10 +16,8 @@ body {
   flex-direction: column;
   color: white;
   position: relative;
-  font-family: sans-serif; /* 元に戻すため、システムフォントに */
+  font-family: sans-serif; /* システムフォントに戻す */
 }
-
-/* その他のスタイルはそのまま */
 
 /* ナビゲーション */
 header {
@@ -124,17 +122,17 @@ main p {
   }
 }
 
-/* PC版の文字サイズ調整 */
+/* PC版（769px以上）の文字サイズ調整 */
 @media (min-width: 769px) {
   main h1 {
-    font-size: 50px;
+    font-size: 80px;  /* h1を大きく */
   }
 
   main p {
-    font-size: 24px;
+    font-size: 36px;  /* pも大きく */
   }
 
   .button-area button {
-    font-size: 18px;
+    font-size: 24px;  /* ボタン文字も大きく */
   }
 }
