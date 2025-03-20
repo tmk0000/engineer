@@ -21,13 +21,12 @@ header {
   align-items: center;
   padding: 20px;
   width: 100%;
-  background: transparent;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 15px; /* ナビゲーションの間隔を少し縮めた */
+  gap: 30px; /* ナビゲーションの間隔を調整 */
   padding: 0;
 }
 
@@ -38,7 +37,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 12px;
+  font-size: 14px; /* サイズを調整 */
   font-weight: 600;
   transition: all 0.3s;
   white-space: nowrap; /* 折り返しを防ぐ */
@@ -56,16 +55,17 @@ main {
   align-items: center;
   text-align: center;
   color: white;
+  padding: 20px;
 }
 
 main h1 {
-  font-size: 50px;
-  max-width: 90%; /* 2列にならないように最大幅を設定 */
-  white-space: nowrap; /* 改行を防ぐ */
+  font-size: 45px; /* 文字サイズを下げる */
+  max-width: 80%; /* 幅を調整して2列にならないようにする */
+  white-space: nowrap; /* 強制的な改行を防ぐ */
 }
 
 main p {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -96,22 +96,19 @@ main p {
   }
 
   nav ul {
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* 無理に折り返さない */
     justify-content: center;
-  }
-
-  nav ul li {
-    margin: 5px;
+    gap: 15px; /* スマホで間隔を狭める */
   }
 
   nav ul li a {
-    font-size: 10px;
+    font-size: 12px; /* スマホでフォントを小さく */
   }
 
   main h1 {
     font-size: 28px;
     max-width: 90%;
-    white-space: normal; /* スマホでは折り返す */
+    white-space: normal; /* スマホでは折り返しを許可 */
   }
 
   main p {
