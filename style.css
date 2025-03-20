@@ -17,15 +17,16 @@ body {
 
 body::after {
   content: "";
-  position: fixed; /* 修正: 画面全体を覆う */
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   background: black;
   opacity: 0.5;
-  z-index: 0; /* 修正: 透明背景がナビゲーションの下にならないように */
+  z-index: -1; /* 修正: z-indexを-1に設定し、背景がナビゲーションの下に表示されるようにする */
 }
+
 
 
 header {
