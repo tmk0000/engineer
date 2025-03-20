@@ -2,7 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* 横スクロールを無効にする */
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -16,18 +16,10 @@ body {
   flex-direction: column;
   color: white;
   position: relative;
+  font-family: sans-serif; /* 元に戻すため、システムフォントに */
 }
 
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5); /* 黒透明のオーバーレイ */
-  z-index: -1; /* ナビゲーションやコンテンツより下に表示 */
-}
+/* その他のスタイルはそのまま */
 
 /* ナビゲーション */
 header {
@@ -36,7 +28,7 @@ header {
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 1000; /* ナビゲーションを最前面に */
+  z-index: 1000;
 }
 
 header nav ul {
@@ -135,14 +127,14 @@ main p {
 /* PC版の文字サイズ調整 */
 @media (min-width: 769px) {
   main h1 {
-    font-size: 50px; /* PC版の文字サイズを少し大きく */
+    font-size: 50px;
   }
 
   main p {
-    font-size: 24px; /* PC版の文字サイズを調整 */
+    font-size: 24px;
   }
 
   .button-area button {
-    font-size: 18px; /* ボタンの文字サイズ */
+    font-size: 18px;
   }
 }
