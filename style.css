@@ -42,22 +42,19 @@ header .logo {
 header nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  margin: 0 10px; /* アイテム間の間隔調整 */
 }
 
 header nav ul li a {
   text-decoration: none;
   color: black;
-  margin-left: 29px;
   font-weight: 600;
   color: white;
   transition: all 0.3s;
-}
-
-header nav ul li .contact {
-  display: block;
-  background: rgb(72, 149, 142);
-  border-radius: 15px;
-  padding: 10px 20px;
 }
 
 header nav ul li a:hover {
@@ -128,18 +125,18 @@ main p {
   /* ナビゲーションを横並びにする */
   header nav ul {
     display: flex;
-    flex-direction: row;  /* 横並びに変更 */
+    flex-direction: row;  /* 横並び */
     justify-content: center;
     width: 100%;
     padding: 0;
   }
 
   header nav ul li {
-    margin: 0 10px; /* アイテム間の間隔調整 */
+    margin: 0 5px; /* アイテム間の間隔を少し小さく調整 */
   }
 
   header nav ul li a {
-    font-size: 14px; /* ナビゲーションの文字サイズを小さく */
+    font-size: 14px; /* ナビゲーションの文字サイズを少し小さく */
   }
 
   /* h1とpの文字サイズ調整 */
