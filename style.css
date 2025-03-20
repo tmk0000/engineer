@@ -138,7 +138,7 @@ main p {
   }
 
   header nav ul li a {
-    font-size: 20px; /* ナビゲーションの文字サイズを少し小さく */
+    font-size: 15px; /* ナビゲーションの文字サイズを少し小さく */
   }
 
   /* h1とpの文字サイズ調整 */
