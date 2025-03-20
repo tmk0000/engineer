@@ -132,20 +132,20 @@ main p {
   }
 
   header nav ul li {
-    margin: 0 7px; /* アイテム間の間隔を少し小さく調整 */
+    margin: 0 5px; /* アイテム間の間隔を少し小さく調整 */
   }
 
   header nav ul li a {
-    font-size: 10px; /* ナビゲーションの文字サイズを少し小さく */
+    font-size: 13px; /* ナビゲーションの文字サイズを少し小さく */
   }
 
   /* h1とpの文字サイズ調整 */
   main h1 {
-    font-size: 28px; /* h1の文字を少し小さく */
+    font-size: 25px; /* h1の文字を少し小さく */
   }
 
   main p {
-    font-size: 20px; /* pの文字を少し小さく */
+    font-size: 18px; /* pの文字を少し小さく */
   }
 
   .button-area button {
