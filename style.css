@@ -125,14 +125,15 @@ main p {
 /* PC版（769px以上）の文字サイズ調整 */
 @media (min-width: 769px) {
   main h1 {
-    font-size: 80px;  /* h1を大きく */
+    font-size: 70px;  /* h1を少し小さく */
   }
 
   main p {
-    font-size: 36px;  /* pも大きく */
+    font-size: 36px;  /* pのサイズはそのまま */
   }
 
   .button-area button {
-    font-size: 24px;  /* ボタン文字も大きく */
+    font-size: 24px;  /* ボタン文字もそのまま */
   }
 }
+
