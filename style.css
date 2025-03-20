@@ -19,15 +19,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 20px;
+  padding: 20px;
   width: 100%;
-  background: transparent; /* 背景を透明に */
+  background: transparent;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 20px; /* ← ナビゲーションの間隔を元に戻した */
+  gap: 15px; /* ナビゲーションの間隔を少し縮めた */
   padding: 0;
 }
 
@@ -41,6 +41,7 @@ nav ul li a {
   font-size: 12px;
   font-weight: 600;
   transition: all 0.3s;
+  white-space: nowrap; /* 折り返しを防ぐ */
 }
 
 nav ul li a:hover {
@@ -58,11 +59,13 @@ main {
 }
 
 main h1 {
-  font-size: 50px; /* 一段階小さく */
+  font-size: 50px;
+  max-width: 90%; /* 2列にならないように最大幅を設定 */
+  white-space: nowrap; /* 改行を防ぐ */
 }
 
 main p {
-  font-size: 25px; /* 一段階小さく */
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -93,7 +96,6 @@ main p {
   }
 
   nav ul {
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -108,6 +110,8 @@ main p {
 
   main h1 {
     font-size: 28px;
+    max-width: 90%;
+    white-space: normal; /* スマホでは折り返す */
   }
 
   main p {
