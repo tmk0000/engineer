@@ -43,6 +43,7 @@ header nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 header nav ul li {
@@ -51,9 +52,8 @@ header nav ul li {
 
 header nav ul li a {
   text-decoration: none;
-  color: black;
-  font-weight: 600;
   color: white;
+  font-weight: 600;
   transition: all 0.3s;
 }
 
@@ -136,16 +136,16 @@ main p {
   }
 
   header nav ul li a {
-    font-size: 14px; /* ナビゲーションの文字サイズを少し小さく */
+    font-size: 10px; /* ナビゲーションの文字サイズを少し小さく */
   }
 
   /* h1とpの文字サイズ調整 */
   main h1 {
-    font-size: 40px; /* h1の文字を少し小さく */
+    font-size: 30px; /* h1の文字を少し小さく */
   }
 
   main p {
-    font-size: 22px; /* pの文字を少し小さく */
+    font-size: 20px; /* pの文字を少し小さく */
   }
 
   .button-area button {
