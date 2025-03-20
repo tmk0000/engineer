@@ -17,26 +17,26 @@ body {
 
 body::after {
   content: "";
-  position: absolute;
+  position: fixed; /* 修正: 画面全体を覆う */
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   background: black;
   opacity: 0.5;
-  z-index: -1;
-　transform: translateY(0);  
+  z-index: 0; /* 修正: 透明背景がナビゲーションの下にならないように */
 }
 
 
 header {
-  position: absolute;
+  position: fixed; /* ナビゲーションを画面上に固定 */
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;  /* 画面全体を覆う */
+  width: 100%;
   background: rgba(0, 0, 0, 0.7);
+  z-index: 1000; /* ほかの要素より前面にする */
 }
+
 
 
 header .logo {
