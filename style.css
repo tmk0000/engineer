@@ -20,7 +20,7 @@ header {
   justify-content: center; /* ナビゲーションを中央揃え */
   align-items: center;
   padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.7); /* 背景を少し黒く */
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
 }
 
@@ -31,14 +31,10 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
-  display: inline-block;
-}
-
 nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 10px; /* スマホ対応のため10px */
+  font-size: 10px;
   font-weight: 600;
   transition: all 0.3s;
 }
@@ -88,13 +84,9 @@ main p {
 }
 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
   nav ul {
-    flex-direction: row; /* スマホでも横並び */
-    flex-wrap: wrap; /* 画面幅が狭くなったら折り返す */
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
