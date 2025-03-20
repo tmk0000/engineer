@@ -126,46 +126,38 @@ main p {
 /* スマホ表示（768px以下）のスタイル */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    align-items: center; /* ヘッダー内の要素を中央揃えに */
-  }
-
-  header nav {
-    width: 100%; /* ナビゲーションを画面幅いっぱいに */
+    flex-direction: row; /* 横並びに変更 */
     justify-content: center; /* 中央揃え */
+    padding: 10px;
   }
 
   header nav ul {
     display: flex;
-    flex-direction: column; /* メニュー項目を縦に並べる */
-    align-items: center; /* 項目を中央揃え */
+    flex-direction: row; /* 横並びに変更 */
+    justify-content: center; /* 中央揃え */
     padding: 0;
   }
 
   header nav ul li {
-    margin: 10px 0; /* アイテム間にスペースを追加 */
+    margin: 0 10px; /* アイテム間の間隔調整 */
   }
 
   header nav ul li a {
-    font-size: 14px; /* メニュー項目の文字サイズを調整 */
-    margin: 10px 0;
+    font-size: 14px; /* ナビゲーションの文字サイズを小さく */
+    margin: 0 15px;
   }
 
   main h1 {
-    font-size: 32px; /* 小さく調整 */
+    font-size: 40px; /* h1の文字を少し小さく */
   }
 
   main p {
-    font-size: 22px; /* 小さく調整 */
+    font-size: 20px; /* pの文字を少し小さく */
   }
 
   .button-area button {
     padding: 15px 25px;
-    font-size: 14px; /* ボタン文字を調整 */
+    font-size: 14px; /* ボタンの文字を少し小さく */
     margin: 20px 20px;
-  }
-
-  .button-area button:hover {
-    color: #767685;
   }
 }
