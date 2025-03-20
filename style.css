@@ -134,11 +134,11 @@ main p {
   }
 
   header nav ul li {
-    margin: 0 5px; /* アイテム間の間隔を少し小さく調整 */
+    margin: 0 10px; /* アイテム間の間隔を少し小さく調整 */
   }
 
   header nav ul li a {
-    font-size: 13px; /* ナビゲーションの文字サイズを少し小さく */
+    font-size: 20px; /* ナビゲーションの文字サイズを少し小さく */
   }
 
   /* h1とpの文字サイズ調整 */
