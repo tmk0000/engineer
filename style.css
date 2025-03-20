@@ -123,25 +123,37 @@ main p {
   transition: 0.15s;
 }
 
+/* スマホ表示（768px以下）のスタイル */
 @media (max-width: 768px) {
- header {
-    flex-direction: column;
+  /* ナビゲーションを横並びにする */
+  header nav ul {
+    display: flex;
+    flex-direction: row;  /* 横並びに変更 */
+    justify-content: center;
+    width: 100%;
+    padding: 0;
   }
-  
+
+  header nav ul li {
+    margin: 0 10px; /* アイテム間の間隔調整 */
+  }
+
   header nav ul li a {
-    font-size: 10px;
-    padding-left: 25;
+    font-size: 14px; /* ナビゲーションの文字サイズを小さく */
   }
-  
+
+  /* h1とpの文字サイズ調整 */
   main h1 {
-    font-size: 32px;
+    font-size: 40px; /* h1の文字を少し小さく */
   }
-  
+
   main p {
-    font-size: 22px;
+    font-size: 22px; /* pの文字を少し小さく */
   }
-  
+
   .button-area button {
     padding: 15px 25px;
-    font-size: 10px;
+    font-size: 14px; /* ボタンの文字を少し小さく */
+    margin: 20px 20px;
   }
+}
