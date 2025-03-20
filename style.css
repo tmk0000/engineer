@@ -1,8 +1,9 @@
-* {
+/* 全体の設定 */
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  overflow-x: hidden; /* 横スクロールを無効にする */
+  width: 100%;
 }
 
 body {
@@ -13,28 +14,29 @@ body {
   background-position: center;
   display: flex;
   flex-direction: column;
-  color: white; /* 文字色を白に設定 */
-  position: relative; /* body内で位置調整 */
+  color: white;
+  position: relative;
 }
 
 body::after {
   content: "";
-  position: absolute; /* fixed → absolute に変更 */
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5); /* 黒透明のオーバーレイ */
-  z-index: 0; /* オーバーレイを背景に配置 */
+  z-index: -1; /* ナビゲーションやコンテンツより下に表示 */
 }
 
+/* ナビゲーション */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 1000; /* ナビゲーションは最前面に */
+  z-index: 1000; /* ナビゲーションを最前面に */
 }
 
 header nav ul {
@@ -50,7 +52,7 @@ header nav ul li {
 
 header nav ul li a {
   text-decoration: none;
-  color: white; /* ナビゲーションの文字色 */
+  color: white;
   font-weight: 600;
   transition: all 0.3s;
 }
@@ -59,15 +61,14 @@ header nav ul li a:hover {
   color: #767685;
 }
 
+/* メインコンテンツ */
 main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  white-space: nowrap;
-  text-align: center;
-  z-index: 1; /* mainコンテンツをオーバーレイの上に表示 */
+  z-index: 1;
 }
 
 main h1 {
@@ -78,10 +79,6 @@ main h1 {
 main p {
   font-size: 30px;
   font-weight: 600;
-}
-
-.main .button-area {
-  margin-top: 40px;
 }
 
 .button-area {
@@ -106,18 +103,6 @@ main p {
   color: #767685;
 }
 
-#cursor {
-  pointer-events: none;
-  width: 30px;
-  height: 30px;
-  background: rgba(240, 136, 122, 0.5);
-  border-radius: 50%;
-  position: fixed;
-  top: -16px;
-  left: -16px;
-  transition: 0.15s;
-}
-
 /* スマホ表示（768px以下）のスタイル */
 @media (max-width: 768px) {
   header nav ul {
@@ -132,10 +117,6 @@ main p {
     margin: 0 10px;
   }
 
-  header nav ul li a {
-    font-size: 15px;
-  }
-
   main h1 {
     font-size: 25px;
   }
@@ -148,5 +129,20 @@ main p {
     padding: 15px 25px;
     font-size: 14px;
     margin: 20px 20px;
+  }
+}
+
+/* PC版の文字サイズ調整 */
+@media (min-width: 769px) {
+  main h1 {
+    font-size: 50px; /* PC版の文字サイズを少し大きく */
+  }
+
+  main p {
+    font-size: 24px; /* PC版の文字サイズを調整 */
+  }
+
+  .button-area button {
+    font-size: 18px; /* ボタンの文字サイズ */
   }
 }
